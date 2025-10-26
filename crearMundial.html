@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Mundial</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="crearMundial.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="header">
+                <h1><i class="fas fa-trophy me-3"></i>Crear Nuevo Mundial</h1>
+                <p class="subtitle">Administración de los torneos de la FIFA</p>
+            </div>
+
+            <div class="form-container">
+                <form id="mundialForm">
+                    
+                    <h4 class="mb-3"><i class="fas fa-info-circle me-2"></i>Información General</h4>
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fas fa-file-signature me-2"></i>Título del Mundial</label>
+                            <input type="text" class="form-control" placeholder="Ej: FIFA World Cup Qatar 2022" required>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fas fa-calendar me-2"></i>Año del Mundial</label>
+                            <input type="number" class="form-control" placeholder="Ej: 2022" min="1930" max="2100" required>
+                            <div class="text-end mt-2">
+                                <button class="btn btn-primary btn-sm" type="button" id="buscarAnioBtn">
+                                    <i class="fas fa-search me-1"></i> Buscar
+                                </button>
+                            </div>
+                        </div>
+                        </div>
+                    
+                    <div class="row mb-4">
+                        <div class="mb-3">
+                            <label class="form-label"><i class="fas fa-globe-americas me-2"></i>País(es) Sede</label>
+                            
+                            <div id="paisesSedeContenedor">
+                                <div class="input-group mb-2">
+                                    <input type="text" class="form-control" placeholder="Nombre del país organizador" required>
+                                </div>
+                            </div>
+
+                            <button type="button" id="agregarPaisBtn" class="btn btn-sm btn-outline-primary mt-2">
+                                <i class="fas fa-plus me-1"></i>Agregar otro país
+                            </button>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fas fa-users me-2"></i>Cantidad de Equipos</label>
+                            <select class="form-select" required>
+                                <option value="">Selecciona cantidad</option>
+                                <option value="16">16 equipos</option>
+                                <option value="24">24 equipos</option>
+                                <option value="32">32 equipos</option>
+                                <option value="48">48 equipos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label"><i class="fas fa-calendar-alt me-2"></i>Fechas del torneo</label>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label-sm">Fecha de inicio</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label-sm">Fecha de finalización</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="mb-4">
+                        <label class="form-label"><i class="fas fa-map-marked-alt me-2"></i>Sedes (Ciudades / Estadios)</label>
+                        
+                        
+                        <div class="input-group mb-2">
+                            <input type="text" name="ciudades[]" class="form-control" placeholder="Ciudad Sede 1">
+                            <span class="input-group-text">/</span>
+                            <input type="text" name="estadios[]" class="form-control" placeholder="Nombre del Estadio 1">
+                        </div>
+
+                        <div class="input-group mb-2">
+                            <input type="text" name="ciudades[]" class="form-control" placeholder="Ciudad Sede 2">
+                            <span class="input-group-text">/</span>
+                            <input type="text" name="estadios[]" class="form-control" placeholder="Nombre del Estadio 2">
+                        </div>
+
+                        <div class="input-group mb-2">
+                            <input type="text" name="ciudades[]" class="form-control" placeholder="Ciudad Sede 3">
+                            <span class="input-group-text">/</span>
+                            <input type="text" name="estadios[]" class="form-control" placeholder="Nombre del Estadio 3">
+                        </div>
+
+                        <button type="button" id="agregarSedeBtn" class="btn btn-sm btn-outline-primary mt-2">
+                            <i class="fas fa-plus me-1"></i>Agregar otra sede
+                        </button>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label"><i class="fas fa-align-left me-2"></i>Descripción del Mundial</label>
+                        <textarea class="form-control" rows="3" placeholder="Datos relevantes y curiosidades sobre este mundial..."></textarea>
+                    </div>
+
+                    <hr class="my-4">
+                    <h4 class="mb-3"><i class="fas fa-palette me-2"></i>Identidad del Torneo</h4>
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fas fa-paw me-2"></i>Nombre de la Mascota</label>
+                            <input type="text" class="form-control" placeholder="Ej: La'eeb">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fas fa-image me-2"></i>Imagen de la Mascota</label>
+                            <input type="file" class="form-control" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fas fa-microphone-alt me-2"></i>Artista de la Ceremonia</label>
+                            <input type="text" class="form-control" placeholder="Nombre del cantante o grupo">
+                        </div>
+                    </div>
+                     <div class="mb-4">
+                        <label class="form-label"><i class="fas fa-image me-2"></i>Logo del Mundial</label>
+                        <div class="upload-area" id="logoUploadArea">
+                            <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                            <h4>Arrastra el logo aquí</h4>
+                            <p>o <strong>haz clic para seleccionar</strong></p>
+                            <input type="file" id="logoInput" class="d-none" accept="image/*">
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+                    <h4 class="mb-3"><i class="fas fa-futbol me-2"></i>Resultados de la Final</h4>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fas fa-trophy me-2"></i>Campeón</label>
+                            <input type="text" class="form-control" placeholder="Nombre del país ganador">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fas fa-medal me-2"></i>Subcampeón</label>
+                            <input type="text" class="form-control" placeholder="Nombre del país finalista">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label"><i class="fas fa-scoreboard me-2"></i>Marcador Final (Tiempo Regular)</label>
+                            <div class="input-group">
+                                <input type="number" name="goles_regular_a" class="form-control" placeholder="Goles Campeón" min="0">
+                                <span class="input-group-text">-</span>
+                                <input type="number" name="goles_regular_b" class="form-control" placeholder="Goles Subcampeón" min="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="hubo_tiempo_extra" id="checkTiempoExtraStatic">
+                            <label class="form-check-label" for="checkTiempoExtraStatic">
+                                Hubo Tiempo Extra
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="definio_penales" id="checkPenalesStatic">
+                            <label class="form-check-label" for="checkPenalesStatic">
+                                Se definió en Penales
+                            </label>
+                        </div>
+                    </div>
+
+                    <p class="text-muted"><small>Por favor, llena las siguientes secciones solo si marcaste las casillas correspondientes.</small></p>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label text-primary"><i class="fas fa-stopwatch me-2"></i>Marcador tras Tiempo Extra</label>
+                            <div class="input-group">
+                                <input type="number" name="goles_extra_a" class="form-control" placeholder="Goles Campeón" min="0">
+                                <span class="input-group-text">-</span>
+                                <input type="number" name="goles_extra_b" class="form-control" placeholder="Goles Subcampeón" min="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label text-success"><i class="fas fa-bullseye me-2"></i>Resultado de los Penales</label>
+                            <div class="input-group">
+                                <input type="number" name="penales_a" class="form-control" placeholder="Penales Campeón" min="0">
+                                <span class="input-group-text">-</span>
+                                <input type="number" name="penales_b" class="form-control" placeholder="Penales Subcampeón" min="0">
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fas fa-shoe-prints me-2"></i>Líder de Goleo</label>
+                            <input type="text" class="form-control" placeholder="Nombre del jugador (Botín de Oro)">
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <button type="button" class="btn btn-secondary me-3">
+                            <i class="fas fa-times me-2"></i>Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save me-2"></i>Guardar Mundial
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

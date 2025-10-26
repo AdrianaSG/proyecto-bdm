@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUNDIALES</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/544/544338.png">
+    <link rel="stylesheet" href="css/bootstrap.css"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="js/bootstrap.bundle.js"></script>  
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold animate__animated animate__bounceInLeft" href="#">⚽ Mundiales</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pais</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Mas Likes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Mas Comentarios</a></li>
+        </ul>
+ 
+      <div class="ms-3">
+        <button type="button" class="btn btn-outline-light btn-sm me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Iniciar Sesión
+        </button>
+        <a href="Registro.php" class="btn btn-success btn-sm">Registrarse</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-light border border-success">
+      <div class="modal-header">
+        <h5 class="modal-title text-success" id="loginModalLabel">Iniciar Sesión</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="username" class="form-label">Nombre de Usuario</label>
+            <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+          </div>
+          <button type="submit" class="btn btn-success w-100">Iniciar Sesión</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <small class="text-muted">¿No tienes cuenta? <a href="#" class="text-success">Regístrate aquí</a></small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="perfil-bar py-3 bg-dark">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Foto + info -->
+      <div class="col-md-4 d-flex align-items-center mb-2 mb-md-0">
+        <img src="https://i.pinimg.com/736x/6f/33/c6/6f33c6716320b1f0a9514703319e3165.jpg" 
+             alt="Foto perfil" class="rounded-circle me-3" width="55" height="55">
+        <div>
+          <h6 class="mb-0 text-white">Juan Pérez</h6>
+          <small class="text-muted">🇲🇽 México</small>
+        </div>
+      </div>
+
+      <!-- Buscador -->
+      <div class="col-md-4 mb-2 mb-md-0">
+        <form class="d-flex">
+          <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar mundial..." aria-label="Search" style="max-width: 200px;">
+          <button class="btn btn-outline-success btn-sm" type="submit">Buscar</button>
+        </form>
+      </div>
+
+      <!-- Botones -->
+      <div class="col-md-4 text-md-end">
+        <div class="mb-2">
+          <a href="perfil.html" class="btn btn-outline-success btn-sm">Perfil</a>
+          <a href="crearCatego.html" class="btn btn-outline-warning btn-sm me-2">➕ Categoría</a>
+          <a href="crearMundial.html" class="btn btn-outline-info btn-sm me-2">🏆 Mundial</a>
+          <a href="aprobarPubli.html" class="btn btn-outline-success btn-sm">✅ Publicación</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <main>
+  <br>
+<div class="container py-5">
+  <div class="card shadow-lg border-0 p-4">
+    
+    <!-- SECCIÓN 1: Información General -->
+    <h4 class="fw-bold mb-3 border-bottom pb-2">📌 Información General</h4>
+    <div class="row g-4 align-items-center mb-4 text-center">
+      <!-- Logo -->
+      <div class="col-md-6">
+        <img src="https://www.sinembargo.mx/wp-content/uploads/2019/09/fifa.jpeg" 
+             class="img-fluid" alt="Logo Qatar 2022" style="max-height:160px; object-fit:contain;">
+      </div>
+      <!-- Título y datos -->
+      <div class="col-md-6 text-md-start text-center">
+        <h3 class="fw-bold">
+          Mundial Qatar 2022 
+          <span class="badge bg-success fs-6 ms-2">Año 2022</span>
+        </h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>País sede:</strong> Qatar</li>
+          <li class="list-group-item"><strong>Sedes / Estadios:</strong> Doha, Lusail, Al Khor, Al Wakrah</li>
+          <li class="list-group-item"><strong>Cantidad de equipos:</strong> 32</li>
+          <li class="list-group-item"><strong>Fechas:</strong> 20 Nov - 18 Dic 2022</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 2: Identidad del Mundial -->
+    <h4 class="fw-bold mb-3 border-bottom pb-2">🎭 Identidad del Mundial</h4>
+    <div class="row g-4 mb-4 align-items-center text-center">
+      <!-- Mascota -->
+      <div class="col-md-6">
+        <img src="https://i.pinimg.com/736x/5b/c0/5b/5bc05b6e39a6b007d17cb7de8e00ef41.jpg" 
+             class="img-fluid" alt="Mascota La’eeb" style="max-height:160px; object-fit:contain;">
+      </div>
+      <div class="col-md-6 text-md-start text-center">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Mascota:</strong> La’eeb</li>
+          <li class="list-group-item"><strong>Cantante Oficial:</strong> Jungkook (Dreamers)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 3: Marcadores Finales -->
+    <h4 class="fw-bold mb-3 border-bottom pb-2">⚽ Marcadores Finales</h4>
+    <div class="row g-4">
+      <div class="col-md-12">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Campeón:</strong> 🇦🇷 Argentina</li>
+          <li class="list-group-item"><strong>Subcampeón:</strong> 🇫🇷 Francia</li>
+          <li class="list-group-item"><strong>Marcador Final:</strong> 3 - 3</li>
+          <li class="list-group-item"><strong>Tiempo Extra:</strong> Sí</li>
+          <li class="list-group-item"><strong>Marcador tras Tiempo Extra:</strong> 4 - 3</li>
+          <li class="list-group-item"><strong>Resultado de los Penales:</strong> 1 - 0</li>
+          <li class="list-group-item"><strong>Líder de goleo:</strong> Kylian Mbappé (8 goles)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Descripción -->
+    <div class="col-12 mt-4">
+      <p class="lead">
+        El Mundial de Qatar 2022 fue uno de los más emocionantes de la historia. 
+        Argentina, liderada por Lionel Messi, venció a Francia en penales tras un empate 3-3 en la final. 
+        La mascota fue <strong>La’eeb</strong> y la canción oficial interpretada por Jungkook (BTS) se convirtió en un himno. 
+        Fue la última Copa del Mundo con 32 equipos, antes de la ampliación a 48 selecciones en 2026.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+  <div class="container pb-5">
+  <h3 class="text-center mb-4 animate__animated animate__fadeInUp">
+    Publicaciones de la comunidad
+  </h3>
+
+  <!-- Botón para crear publicación -->
+  <div class="text-center mb-4">
+    <a href="crearPubli.html" class="btn btn-success btn-lg">
+      ➕ Crear Publicación
+    </a>
+  </div>
+
+  <div class="row g-4">
+
+
+<div class="col-md-6">
+  <div class="card publication-card shadow animate__animated animate__fadeInUp position-relative">
+
+   
+    <span class="badge bg-success position-absolute top-0 end-0 m-2">
+      <i class="fas fa-futbol"></i> Partidos
+    </span>
+
+   
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIzx93l0N9RTdiIRLwDp18IbWQ2ZT-7p2syQ&s" 
+         class="card-img-top" alt="Imagen de la publicación">
+
+    <div class="card-body">
+
+      <h5 class="card-title">¡Qué final tan increíble!</h5>
+
+
+      <p><i class="fas fa-globe me-2"></i><strong>Mundial:</strong> Qatar 2022</p>
+
+      
+      <p><i class="fas fa-flag me-2"></i><strong>Selección:</strong> 🇦🇷 Argentina</p>
+
+  
+      <div class="expandable-content mt-3" style="display:none;">
+        <p class="card-text">
+          Nunca olvidaré ese partido, fue el mejor de todos los tiempos. 
+          Messi levantando la copa es una imagen histórica.
+        </p>
+
+     
+        <div class="mt-3">
+          <h6 class="text-muted"><i class="fas fa-comment-dots me-2"></i>Comentarios:</h6>
+          <ul class="list-unstyled">
+            <li><strong>Carlos:</strong> ¡Un partido de locura! 🔥</li>
+            <li><strong>Laura:</strong> Messi se lo merecía ❤️</li>
+          </ul>
+          <div class="input-group mt-2">
+            <input type="text" class="form-control" placeholder="Escribe un comentario...">
+            <button class="btn btn-success">Enviar</button>
+          </div>
+        </div>
+      </div>
+
+
+      <button class="btn btn-warning btn-sm mt-2 view-btn">Ver publicación</button>
+
+   
+      <button class="btn btn-info btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#ratingModal1">
+        Calificar publicación
+      </button>
+    </div>
+
+   
+    <div class="card-footer d-flex justify-content-between text-muted">
+      <span><i class="fas fa-user me-2"></i>Publicado por Ana López 🇦🇷 - 19/12/2022</span>
+      <span class="views-count"><i class="fas fa-eye me-1"></i>123 vistas</span>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="ratingModal1" tabindex="-1" aria-labelledby="ratingModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background-color:#f8f9fa; color:#212529;">
+      <div class="modal-header" style="background-color:#343a40; color:#fff;">
+        <h5 class="modal-title" id="ratingModalLabel1">Calificar Publicación</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <label for="ratingRange1" class="form-label">Selecciona tu puntuación (1-10):</label>
+        <input type="range" class="form-range" min="1" max="10" step="1" id="ratingRange1">
+        <p class="mt-2">Puntuación seleccionada: <span id="ratingValue1">5</span> ⭐</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Enviar puntuación</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-6">
+  <div class="card publication-card shadow animate__animated animate__fadeInUp position-relative" style="animation-delay:0.2s;">
+    
+    
+     <span class="badge bg-success position-absolute top-0 end-0 m-2">
+      <i class="fas fa-futbol"></i> Partidos
+    </span>
+
+     
+      <div class="ratio ratio-16x9 my-2">
+        <iframe src="https://www.youtube.com/watch?v=HMmuakQ-WUY" title="Video Mbappé" allowfullscreen></iframe>
+      </div>
+
+    
+    <div class="card-body">
+      <h5 class="card-title">Mbappé casi lo logra</h5>
+
+     
+      <p><i class="fas fa-globe me-2"></i><strong>Mundial:</strong> Qatar 2022</p>
+
+     
+      <p><i class="fas fa-flag me-2"></i><strong>Selección:</strong> 🇦🇷 Argentina</p>
+
+     
+      <div class="expandable-content mt-3" style="display:none;">
+        <p class="card-text">
+          Increíble cómo Mbappé marcó un hat-trick en la final. 
+          Francia luchó hasta el último segundo.
+        </p>
+
+       
+        <div class="mt-3">
+          <h6 class="text-muted">Comentarios:</h6>
+          <ul class="list-unstyled">
+            <li><strong>Ana:</strong> ¡Qué jugadorazo es Mbappé! ⚡</li>
+            <li><strong>Pedro:</strong> Francia estuvo a nada de ganar.</li>
+          </ul>
+          <div class="input-group mt-2">
+            <input type="text" class="form-control" placeholder="Escribe un comentario...">
+            <button class="btn btn-success">Enviar</button>
+          </div>
+        </div>
+      </div>
+
+    
+      <button class="btn btn-warning btn-sm mt-2 view-btn">Ver publicación</button>
+
+      
+      <button class="btn btn-info btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#ratingModal2">
+        Calificar publicación
+      </button>
+    </div>
+
+    
+    <div class="card-footer d-flex justify-content-between text-muted">
+      <span>Publicado por Carlos Méndez 🇫🇷 - 19/12/2022</span>
+      <span class="views-count">👁 87 vistas</span>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="ratingModal2" tabindex="-1" aria-labelledby="ratingModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background-color:#f8f9fa; color:#212529;">
+      <div class="modal-header" style="background-color:#343a40; color:#fff;">
+        <h5 class="modal-title" id="ratingModalLabel2">Calificar Publicación</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <label for="ratingRange2" class="form-label">Selecciona tu puntuación (1-10):</label>
+        <input type="range" class="form-range" min="1" max="10" step="1" id="ratingRange2">
+        <p class="mt-2">Puntuación seleccionada: <span id="ratingValue2">5</span> ⭐</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Enviar puntuación</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+
+    $('.view-btn').click(function(){
+      var content = $(this).siblings('.expandable-content');
+      content.slideToggle(); 
+    });
+
+  
+    $('#ratingRange1').on('input', function(){
+      $('#ratingValue1').text(this.value);
+    });
+    $('#ratingRange2').on('input', function(){
+      $('#ratingValue2').text(this.value);
+    });
+  });
+</script>
+
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center mt-5">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  </main>
+
+ <footer class="text-center py-3 mt-5">
+    <div class="container">
+      <div class="row">
+    
+        <div class="col-md-4">
+          <h5>Enlaces</h5>
+          <a href="Mundiales.php" class="text-light d-block">Pagina Principal</a>
+          <a href="Nosotros.html" class="text-light d-block">Sobre Nosotros</a>
+          <a href="politicas.html" class="text-light d-block">Políticas de Privacidad</a>
+        </div>
+  
+ 
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p>Email:contacto@mundiales.com</p>
+        </div>
+ 
+        <div class="col-md-4">
+          <h5>Redes de las autoras</h5>
+          <a href="https://www.instagram.com/lin_orchid.clip" class="text-light me-2"><i class="fab fa-facebook"></i>Instagram</a> 
+          <a href="https://www.instagram.com/adry_sg05" class="text-light"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+      </div>
+  
+      <hr class="my-3">
+      <p class="mb-0">© 2024 Mundiales. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

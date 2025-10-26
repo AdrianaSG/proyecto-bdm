@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprobar Publicaciones</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="aprobarPubli.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="header">
+                <h1><i class="fas fa-check-circle me-3"></i>Aprobar Publicaciones</h1>
+                <p class="subtitle">Gestiona las publicaciones pendientes de revisión</p>
+            </div>
+
+            <div class="controls-container">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            <i class="fas fa-filter me-2"></i>Filtrar por estado
+                        </label>
+                        <select class="form-select" id="filterStatus">
+                            <option value="all">Todas las publicaciones</option>
+                            <option value="pending" selected>Pendientes de revisión</option>
+                            <option value="approved">Aprobadas</option>
+                            <option value="rejected">Rechazadas</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            <i class="fas fa-search me-2"></i>Buscar
+                        </label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Buscar por título, usuario...">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publications-list">
+               
+                <div class="publication-card pending">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            <h3>Las mejores jugadas de la fecha 3</h3>
+                            <span class="badge bg-warning">Pendiente</span>
+                        </div>
+                        <div class="publication-meta">
+                            <span><i class="fas fa-user me-1"></i>usuario_futbolero</span>
+                            <span><i class="fas fa-clock me-1"></i>Hace 2 horas</span>
+                            <span><i class="fas fa-tag me-1"></i>Jugadas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-content">
+                        <div class="publication-preview">
+                            <div class="preview-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23e9ecef'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%236c757d'%3EImagen de muestra%3C/text%3E%3C/svg%3E" alt="Vista previa">
+                            </div>
+                            <div class="preview-text">
+                                <p>Recopilación de las jugadas más destacadas de la tercera fecha del grupo B, con especial mención al gol de chilena de Martínez...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-actions">
+                        <button class="btn btn-success btn-sm">
+                            <i class="fas fa-check me-1"></i>Aprobar
+                        </button>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="fas fa-times me-1"></i>Rechazar
+                        </button>
+                        
+                    </div>
+                </div>
+
+               
+                <div class="publication-card pending">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            <h3>Entrevista exclusiva con el técnico argentino</h3>
+                            <span class="badge bg-warning">Pendiente</span>
+                        </div>
+                        <div class="publication-meta">
+                            <span><i class="fas fa-user me-1"></i>periodista_deportivo</span>
+                            <span><i class="fas fa-clock me-1"></i>Hace 5 horas</span>
+                            <span><i class="fas fa-tag me-1"></i>Entrevistas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-content">
+                        <div class="publication-preview">
+                            <div class="preview-video">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Video_entrevista.mp4</span>
+                            </div>
+                            <div class="preview-text">
+                                <p>Tuve la oportunidad de sentarme con el director técnico de la selección argentina para hablar sobre las expectativas para el próximo partido contra Brasil...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-actions">
+                        <button class="btn btn-success btn-sm">
+                            <i class="fas fa-check me-1"></i>Aprobar
+                        </button>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="fas fa-times me-1"></i>Rechazar
+                        </button>
+                        
+                        
+                    </div>
+                </div>
+
+               
+                <div class="publication-card pending">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            <h3>Análisis táctico: Brasil vs Alemania</h3>
+                            <span class="badge bg-warning">Pendiente</span>
+                        </div>
+                        <div class="publication-meta">
+                            <span><i class="fas fa-user me-1"></i>analista_tactico</span>
+                            <span><i class="fas fa-clock me-1"></i>Ayer</span>
+                            <span><i class="fas fa-tag me-1"></i>Estadísticas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-content">
+                        <div class="publication-preview">
+                            <div class="preview-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23e9ecef'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='%236c757d'%3EGr%C3%A1fico estad%C3%ADstico%3C/text%3E%3C/svg%3E" alt="Vista previa">
+                            </div>
+                            <div class="preview-text">
+                                <p>Un análisis detallado de las estrategias utilizadas por ambos equipos en el último encuentro, con estadísticas de posesión, tiros a puerta y efectividad de pases...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-actions">
+                        <button class="btn btn-success btn-sm">
+                            <i class="fas fa-check me-1"></i>Aprobar
+                        </button>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="fas fa-times me-1"></i>Rechazar
+                        </button>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination-container">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Siguiente</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

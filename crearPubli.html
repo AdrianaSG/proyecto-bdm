@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Publicación</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="crearPubli.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="header">
+                <h1><i class="fas fa-futbol me-3"></i>Crear publicación</h1>
+                <p class="subtitle">Comparte tu pasión por el fútbol mundial</p>
+            </div>
+
+            <div class="form-container">
+                <form id="postForm">
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">
+                                <i class="fas fa-user me-2"></i>Título de la publicación
+                            </label>
+                            <input type="text" class="form-control" placeholder="Escribe un título llamativo..." required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">
+                                <i class="fas fa-globe me-2"></i>Mundial
+                            </label>
+                            <select class="form-select" required>
+                                <option value="">Selecciona el mundial</option>
+                                <option value="2026">Mundial 2026 - USA, Canadá, México</option>
+                                <option value="2022">Mundial 2022 - Qatar</option>
+                                <option value="2018">Mundial 2018 - Rusia</option>
+                                <option value="otros">Otros mundiales</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">
+                            <i class="fas fa-tags me-2"></i>Selecciona una categoría
+                        </label>
+                        <div class="category-grid">
+                            <div class="category-card" data-category="jugadas">
+                                <i class="fas fa-running"></i>
+                                <strong>Jugadas</strong>
+                            </div>
+                            <div class="category-card" data-category="entrevistas">
+                                <i class="fas fa-microphone"></i>
+                                <strong>Entrevistas</strong>
+                            </div>
+                            <div class="category-card" data-category="partidos">
+                                <i class="fas fa-futbol"></i>
+                                <strong>Partidos</strong>
+                            </div>
+                            <div class="category-card" data-category="estadisticas">
+                                <i class="fas fa-chart-bar"></i>
+                                <strong>Estadísticas</strong>
+                            </div>
+                            <div class="category-card" data-category="asistentes">
+                                <i class="fas fa-users"></i>
+                                <strong>Asistentes</strong>
+                            </div>
+                            <div class="category-card" data-category="incidentes">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <strong>Incidentes</strong>
+                            </div>
+                            <div class="category-card" data-category="polemicas">
+                                <i class="fas fa-fire"></i>
+                                <strong>Polémicas</strong>
+                            </div>
+                            <div class="category-card" data-category="sedes">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <strong>Sedes</strong>
+                            </div>
+                            <div class="category-card" data-category="cultura">
+                                <i class="fas fa-heart"></i>
+                                <strong>Cultura</strong>
+                            </div>
+                        </div>
+                        <input type="hidden" id="selectedCategory" name="category" required>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">
+                                <i class="fas fa-flag me-2"></i>Selección (opcional)
+                            </label>
+                            <select class="form-select">
+                                <option value="">Selecciona una selección</option>
+                                <option value="argentina">Argentina</option>
+                                <option value="brasil">Brasil</option>
+                                <option value="mexico">México</option>
+                                <option value="usa">Estados Unidos</option>
+                                <option value="canada">Canadá</option>
+                                <option value="francia">Francia</option>
+                                <option value="alemania">Alemania</option>
+                                <option value="espana">España</option>
+                                <option value="inglaterra">Inglaterra</option>
+                                <option value="portugal">Portugal</option>
+                                <option value="italia">Italia</option>
+                                <option value="holanda">Holanda</option>
+                                <option value="otros">Otros países</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">
+                            <i class="fas fa-comment me-2"></i>Descripción
+                        </label>
+                        <textarea class="form-control" rows="4" placeholder="Comparte los detalles de tu publicación..." required></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">
+                            <i class="fas fa-cloud-upload-alt me-2"></i>Subir archivo
+                        </label>
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <h4>Arrastra tu archivo aquí</h4>
+                            <p>o <strong>haz clic para seleccionar</strong></p>
+                            <p class="text-muted">Formatos soportados: JPG, PNG, MP4, MOV (máx. 50MB)</p>
+                            <input type="file" id="fileInput" class="d-none" accept="image/*,video/*" required>
+                        </div>
+                        <div class="preview-area" id="previewArea">
+                            <div class="file-info" id="fileInfo"></div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane me-2"></i>Publicar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

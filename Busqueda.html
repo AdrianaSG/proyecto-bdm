@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados de búsqueda</title>
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/544/544338.png">
+  <link rel="stylesheet" href="css/bootstrap.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="js/bootstrap.bundle.js"></script>  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold animate__animated animate__bounceInLeft" href="#">
+      ⚽ Mundiales
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">País</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Más Likes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Más Comentarios</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="perfil-bar py-3 bg-dark">
+  <div class="container">
+    <div class="row align-items-center">
+   
+    <div class="col-md-4 d-flex align-items-center mb-2 mb-md-0">
+        <img src="https://i.pinimg.com/736x/6f/33/c6/6f33c6716320b1f0a9514703319e3165.jpg" 
+             alt="Foto perfil" class="rounded-circle me-3" width="55" height="55">
+        <div>
+          <h6 class="mb-0 text-white">Juan Pérez</h6>
+          <small class="text-muted">🇲🇽 México</small>
+        </div>
+      </div>
+
+   <!-- Buscador -->
+      <div class="col-md-4 mb-2 mb-md-0">
+        <form class="d-flex">
+          <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar mundial..." aria-label="Search" style="max-width: 200px;">
+          <button class="btn btn-outline-success btn-sm" type="submit">Buscar</button>
+        </form>
+      </div>
+
+       <div class="col-md-4 text-md-end">
+        <div class="mb-2">
+          <a href="perfil.html" class="btn btn-outline-success btn-sm">Perfil</a>
+          <a href="crearCatego.html" class="btn btn-outline-warning btn-sm me-2">➕ Categoría</a>
+          <a href="crearMundial.html" class="btn btn-outline-info btn-sm me-2">🏆 Mundial</a>
+          <a href="aprobarPubli.html" class="btn btn-outline-success btn-sm">✅ Publicación</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Espacio navbar -->
+<div style="height: 70px;"></div>
+
+<!-- Resultados -->
+<div class="container py-5">
+  <h2 class="text-center mb-5">🔍 Resultados de búsqueda</h2>
+
+  <!-- Sección Mundiales -->
+  <div class="mb-5">
+    <h3 class="text-success mb-4">🌍 Mundiales encontrados</h3>
+    <div class="row g-4">
+
+      <!-- Card Mundial -->
+      <div class="col-md-4">
+  <div class="card shadow-lg animate__animated animate__bounceInUp">
+    <img src="https://png.pngtree.com/thumb_back/fh260/background/20231229/pngtree-dynamic-world-championship-football-cup-background-national-team-emblem-with-soccer-image_13876819.png" class="card-img-top" alt="Brasil 2014">
+   <div class="card-body">
+      <h5 class="card-title">Rusia 2018</h5>
+      <div class="extra-info">
+        <p class="card-text">
+          Francia obtuvo su segunda Copa del Mundo tras vencer a Croacia 4-2 
+          en una final llena de goles.
+        </p>
+        <a href="Publicaciones.html" class="btn btn-success btn-sm">Ver Publicaciones</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Card Mundial -->
+     <div class="col-md-4">
+  <div class="card shadow-lg animate__animated animate__bounceInUp">
+    <img src="https://png.pngtree.com/thumb_back/fh260/background/20231229/pngtree-dynamic-world-championship-football-cup-background-national-team-emblem-with-soccer-image_13876819.png" class="card-img-top" alt="Brasil 2014">
+    <div class="card-body">
+      <h5 class="card-title">Qatar 2022</h5>
+      <div class="extra-info">
+        <p class="card-text">
+          Alemania se consagró campeón tras vencer a Argentina.
+        </p>
+        <a href="Publicaciones.html" class="btn btn-success btn-sm">Ver Publicaciones</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Sección Publicaciones -->
+  <div>
+    <h3 class="text-primary mb-4">📰 Publicaciones encontradas</h3>
+    <div class="row g-4">
+
+      <!-- Card Publicación -->
+     <div class="col-md-6">
+  <div class="card publication-card shadow animate__animated animate__fadeInUp position-relative" style="animation-delay:0.2s;">
+    
+    
+     <span class="badge bg-success position-absolute top-0 end-0 m-2">
+      <i class="fas fa-futbol"></i> Partidos
+    </span>
+
+     
+      <div class="ratio ratio-16x9 my-2">
+        <iframe src="https://www.youtube.com/watch?v=HMmuakQ-WUY" title="Video Mbappé" allowfullscreen></iframe>
+      </div>
+
+    
+    <div class="card-body">
+      <h5 class="card-title">Mbappé casi lo logra</h5>
+
+     
+      <p><i class="fas fa-globe me-2"></i><strong>Mundial:</strong> Qatar 2022</p>
+
+     
+      <p><i class="fas fa-flag me-2"></i><strong>Selección:</strong> 🇦🇷 Argentina</p>
+
+     
+      <div class="expandable-content mt-3" style="display:none;">
+        <p class="card-text">
+          Increíble cómo Mbappé marcó un hat-trick en la final. 
+          Francia luchó hasta el último segundo.
+        </p>
+
+       
+        <div class="mt-3">
+          <h6 class="text-muted">Comentarios:</h6>
+          <ul class="list-unstyled">
+            <li><strong>Ana:</strong> ¡Qué jugadorazo es Mbappé! ⚡</li>
+            <li><strong>Pedro:</strong> Francia estuvo a nada de ganar.</li>
+          </ul>
+          <div class="input-group mt-2">
+            <input type="text" class="form-control" placeholder="Escribe un comentario...">
+            <button class="btn btn-success">Enviar</button>
+          </div>
+        </div>
+      </div>
+
+    
+      <button class="btn btn-warning btn-sm mt-2 view-btn">Ver publicación</button>
+
+      
+      <button class="btn btn-info btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#ratingModal2">
+        Calificar publicación
+      </button>
+    </div>
+
+    
+    <div class="card-footer d-flex justify-content-between text-muted">
+      <span>Publicado por Carlos Méndez 🇫🇷 - 19/12/2022</span>
+      <span class="views-count">👁 87 vistas</span>
+    </div>
+  </div>
+</div>
+
+      <!-- Card Publicación -->
+      <div class="col-md-6">
+  <div class="card publication-card shadow animate__animated animate__fadeInUp position-relative" style="animation-delay:0.2s;">
+    
+    
+     <span class="badge bg-success position-absolute top-0 end-0 m-2">
+      <i class="fas fa-futbol"></i> Partidos
+    </span>
+
+     
+      <div class="ratio ratio-16x9 my-2">
+        <iframe src="https://www.youtube.com/watch?v=HMmuakQ-WUY" title="Video Mbappé" allowfullscreen></iframe>
+      </div>
+
+    
+    <div class="card-body">
+      <h5 class="card-title">Mbappé casi lo logra</h5>
+
+     
+      <p><i class="fas fa-globe me-2"></i><strong>Mundial:</strong> Qatar 2022</p>
+
+     
+      <p><i class="fas fa-flag me-2"></i><strong>Selección:</strong> 🇦🇷 Argentina</p>
+
+     
+      <div class="expandable-content mt-3" style="display:none;">
+        <p class="card-text">
+          Increíble cómo Mbappé marcó un hat-trick en la final. 
+          Francia luchó hasta el último segundo.
+        </p>
+
+       
+        <div class="mt-3">
+          <h6 class="text-muted">Comentarios:</h6>
+          <ul class="list-unstyled">
+            <li><strong>Ana:</strong> ¡Qué jugadorazo es Mbappé! ⚡</li>
+            <li><strong>Pedro:</strong> Francia estuvo a nada de ganar.</li>
+          </ul>
+          <div class="input-group mt-2">
+            <input type="text" class="form-control" placeholder="Escribe un comentario...">
+            <button class="btn btn-success">Enviar</button>
+          </div>
+        </div>
+      </div>
+
+    
+      <button class="btn btn-warning btn-sm mt-2 view-btn">Ver publicación</button>
+
+      
+      <button class="btn btn-info btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#ratingModal2">
+        Calificar publicación
+      </button>
+    </div>
+
+    
+    <div class="card-footer d-flex justify-content-between text-muted">
+      <span>Publicado por Carlos Méndez 🇫🇷 - 19/12/2022</span>
+      <span class="views-count">👁 87 vistas</span>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+ <footer class="text-center py-3 mt-5">
+    <div class="container">
+      <div class="row">
+    
+        <div class="col-md-4">
+          <h5>Enlaces</h5>
+          <a href="Mundiales.php" class="text-light d-block">Pagina Principal</a>
+          <a href="Nosotros.html" class="text-light d-block">Sobre Nosotros</a>
+          <a href="politicas.html" class="text-light d-block">Políticas de Privacidad</a>
+        </div>
+  
+ 
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p>Email:contacto@mundiales.com</p>
+        </div>
+ 
+        <div class="col-md-4">
+          <h5>Redes de las autoras</h5>
+          <a href="https://www.instagram.com/lin_orchid.clip" class="text-light me-2"><i class="fab fa-facebook"></i>Instagram</a> 
+          <a href="https://www.instagram.com/adry_sg05" class="text-light"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+      </div>
+  
+      <hr class="my-3">
+      <p class="mb-0">© 2024 Mundiales. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
